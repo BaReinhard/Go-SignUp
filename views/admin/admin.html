@@ -1,0 +1,22 @@
+<div class="homeView">
+    <h1>Universal Studios Fitness Center Admin</h1>
+        <div class="btn-container">
+    	    <div class="panel-group">
+                <div class="panel panel-primary" ng-repeat="s in suggestions">
+                    <div class="panel-heading">Suggestion Made On: {{s.date}} | By: {{s.name}}</div>
+                    <div class="panel-body" style="width:100%">Suggestion: {{s.suggestion}}<div class="btn btn-danger delete-one" ng-click="delete($index)"><i class="fa fa-trash"></i> Delete</div></div>
+                </div>
+            </div>
+
+            <div class="btn btn-danger" ng-click="deleteAll()"><i class="fa fa-trash"></i> DELETE ALL</div>
+            <div class="btn btn-success" ng-click="update()"><i class="fa fa-undo"></i> Show All Deleted</div>
+
+        
+        </div>
+    <h3 class="correct" style="color:green" ng-if="!NoError"><span class="message">{{errorMessage}}</span></h3>
+    <a href="#!/" ><div class="btn btn-default back">Home</div></a>
+    <a href="#!/suggestions"><div class="btn btn-default next">Suggest</div></a>
+
+
+</div>
+

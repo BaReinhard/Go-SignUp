@@ -1,0 +1,55 @@
+﻿<div class="homeView container email-container">
+
+    <a href="#!/"><div class="btn btn-default email">Back to Main</div></a>
+    <div ng-bind-html="renderHtml(errorMessage)"></div>
+    <div class="form-container">
+        <h1 style="color:black; background-color:rgba(255,255,255,0);margin-top:0;">Email Registration</h1>
+
+        <form name="userForm" ng-submit="sendRegistration()" novalidate>
+
+            <!-- Name -->
+            <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                <label for="name" class="cols-sm-2 control-label">Name</label>
+                <div class="input-group">
+                    <span class="input-group-addon check-input-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" ng-model="name" required>
+
+                </div>
+                <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                <label for="email" class="cols-sm-2 control-label">Email</label>
+                <div class="input-group">
+                    <span class="input-group-addon check-input-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your Email" ng-model="email" required>
+
+                </div>
+                <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+            </div>
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block checkIn-button" ng-disabled="userForm.$invalid"><i class="fa fa-circle-o" aria-hidden="true"></i> Send Registration</button>
+        </form>
+        <div ng-show="!showForm" class="modal fade" id="checkOutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog " role="document">
+                <div class="modal-vertical-align">
+                    <div class="modal-align-center">
+                        <div class="modal-content alert alert-success">
+                            <div class="modal-header">
+                                <div class="modal-title" id="myModalLabel" ng-bind-html="renderHtml(resultTitle)"></div>
+                            </div>
+                            <div class="modal-body">
+                                <!-- CheckOut Result -->
+                                <div ng-bind-html="renderHtml(resultMessage)"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

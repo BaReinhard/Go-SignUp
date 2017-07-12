@@ -1,0 +1,141 @@
+.homeView{
+	text-align:center!important;
+	margin: 5vh auto 2vh auto;
+	width: 100%;
+	font-family: 'Russo One'
+}
+.homeView h1{
+    text-align:center!important;
+    color: rgb(28,158,218);
+    margin: 5vh auto 3vh auto;
+    font-family: 'Russo One';
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px;
+    font-size: 6vh;
+    width: 80%;
+    padding: 2vh 2vw;
+}
+.homeView .home-title{
+    color: rgb(28,158,218);
+   
+    padding: 2vh 0 6vh 0;
+    margin: 0 0 8vh 0;
+    
+}
+.hometitle{
+    padding: 20px;
+    background: rgba(255,255,255,.8);
+    border-radius: 15px;
+}
+
+.message{
+position:relative;
+top:25%;
+bottom:25%;
+}
+.correct{
+z-index: 1;
+height: 50%;
+padding: 0 100px;
+margin: 0 auto;
+
+background: rgba(255,255,255,.9);
+border-radius:15px;
+box-shadow: 10px 10px 5px #000000;
+position:absolute;
+top: 25%;
+left: 25%;
+right:25%;
+
+
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.homeView input:focus {
+    outline: none;
+}
+html:before{
+content: ' ';
+    display: block;
+    position:fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .7;
+     background-image: url("/img/background.jpg");
+background-size:cover;
+    background-position: 100% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+
+}
+ .email{
+     font-weight:bold;
+     position:fixed;
+     left:3vw;
+     top:5vh;
+     color:black;
+ }
+
+.email-container{
+    width:50%;
+    margin: 10vh auto;
+}
+.email-container input{
+    height:4vh;
+}
+.email-container label{
+    display: flex;
+    
+    font-size:3vh;
+    
+}
+.form-container{
+    background-color:rgba(255,255,255,0.8);
+   padding:20px;
+   border-radius:10px;
+}
+.homeView h3{
+	font-size: 4vh;
+}
+
+.btn-container{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 0;
+}
+
+.promo {
+    width: 70%;
+    word-wrap: break-word;
+}
+
+img{
+    border-radius:  16px !important;
+}
+
+.imgBtn {
+    margin: 10px;
+  width:35%;
+  box-shadow: 10px 10px 10px black;
+}
+
+.imgBtn:hover {
+  box-shadow: inset 0 0 0 20rem rgb(28,158,218);
+}
+
+.imgBtn:active {
+  box-shadow: inset 0 0 0 20rem rgb(0,0,0);
+    
+}
+
+

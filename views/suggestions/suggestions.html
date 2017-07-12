@@ -1,0 +1,21 @@
+<div class="homeView">
+    <h1>Universal Studios Fitness Center Suggestion Box</h1>
+    <div class="btn-container">
+	    <form name="userForm" ng-submit="submitForm()" novalidate>
+        Name (optional): <br/>
+        <input style="border:none" type="text" ng-model="name" ng-blur="checkName()">
+        <br/>
+        Suggestion: <br/>
+        <textarea cols="50" rows="15" ng-model="suggestion"></textarea> 
+        <br />
+        <div class="btn btn-success" ng-click="submitForm()" ><i class="fa fa-check-square-o"></i> Submit</div>
+        </form>
+        
+    </div>
+    <h3 class="correct" style="color:green" ng-if="!NoError"><span class="error-message">{{errorMessage}}</span></h3>
+     <a href="#!/" ><div class="btn btn-default back">Home</div></a>
+	 <h3 class="correct" style="color:green" ng-if="!NoMessage"><span class="submit-message">{{submitMessage}}</span></h3>
+     
+
+</div>
+
